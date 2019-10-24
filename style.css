@@ -1,0 +1,166 @@
+:root {
+    --main-orange: #F26600;
+    --secondary-orange: #F26600;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    background: #1D1E22;
+  }
+  
+  
+  .container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-image: linear-gradient(#0000, #006DB6);
+    overflow: hidden;
+  }
+  
+  .fish-container {
+    position: absolute;
+    z-index: 100;
+    top: 300px;
+    right: -100px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: swim;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .fish-body {
+    width: 100px;
+    height: 100px;
+    background: var(--main-orange);
+    border-radius: 100px 100px 100px 100px;
+    transform: scale(1, 0.4);
+  }
+  
+  /* fish eye */
+  .fish-body::before {
+    content: "";
+    position: absolute;
+    border-radius: 100px 100px 100px 100px;
+    width: 10px;
+    height: 10px;
+    left: 10px;
+    top: 30px;
+    background: #000000;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .fish-tail {
+    position: absolute;
+    width: 0;
+      height: 0;
+    right: -45px;
+    top: -22px;
+    border-top: 65px solid transparent;
+    border-right: 50px solid var(--secondary-orange);
+    border-bottom: 65px solid transparent;
+    overflow:hidden;
+  }
+  
+  .fish-tail::after {
+    content: "";
+    position: absolute;
+    right: -138px;
+    top: -100px;
+    background: white;
+    width: 100px;
+    height: 200px;
+    border-radius: 50%;
+     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  
+  .fish-fin {
+    position: absolute;
+    bottom: -40px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    
+  }
+  
+  .fish-fin::before {
+    content: "";
+    position: absolute;
+    background: var(--secondary-orange);
+    border-radius: 100px 100px 100px 1000px;
+    right: -22px;
+    top: -49px;
+    height: 100px;
+    width: 75px;
+  }
+  
+  .fin-top {
+    position: absolute;
+    top: 0;
+    left: 22px;
+    transform: rotate(90deg);
+    
+  }
+  
+  
+  .body-container {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    border-radius: 0px 0px 1000px  1000px;
+    overflow: hidden;
+  }
+  
+  .body-shape {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    border-radius: 1000px 1000px 200px  200px;
+    background: blue;
+    
+  }
+  
+  .wave {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    bottom: 300px;
+    right: -200px;
+    
+    background-image: radial-gradient(#F26600, #F26611);
+    border-radius: 40%;
+    animation: wave 15s infinite linear;
+  }
+  
+  .wave-2 {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    bottom: 300px;
+    right: -200px;
+    
+    background-image: radial-gradient(#F266, #F266);
+    border-radius: 35%;
+    opacity: 20%;
+    z-index: 100;
+    animation: wave 15s infinite linear;
+  }
+  
+  @keyframes wave {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg);}
+  }
+  
+  
+  @keyframes swim {
+    from {right: -100px}
+    to {right: 600px}
+  }
+  
