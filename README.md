@@ -9,5 +9,5 @@ CodePen: https://codepen.io/k3vinyan/pen/zYYwWMV
 
 * Fish need some extra work :)
 * Helpful sources
-** https://css-tricks.com/the-shapes-of-css/
-** https://css-tricks.com/clipping-masking-css/
+  * https://css-tricks.com/the-shapes-of-css/
+  * https://css-tricks.com/clipping-masking-css/
